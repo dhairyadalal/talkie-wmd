@@ -1,0 +1,20 @@
+.venv/
+.uv-cache/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+
+# Downloaded assets and generated output
+models/
+data/
+results/
+
+# Catch weights or dataset shards placed outside the standard directories
+*.gguf
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.parquet
+*.arrow
+pytorch_model*.bin
