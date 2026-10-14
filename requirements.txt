@@ -1,5 +1,0 @@
-llama-cpp-python>=0.3.16
-huggingface-hub>=0.34
-pandas>=2.0
-pyarrow>=15.0
-ipykernel>=6.0

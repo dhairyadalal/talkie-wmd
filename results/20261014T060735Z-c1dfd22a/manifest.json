@@ -1,0 +1,66 @@
+{
+  "run_id": "20261014T060735Z-c1dfd22a",
+  "started_utc": "2026-10-14T06:08:39.687958+00:00",
+  "experiment": "talkie_wmdp_bio_format_pilot",
+  "description": "Prompt-format compliance smoke test; accuracy is diagnostic only.",
+  "git_commit": "27bf9d104ec50fadb452d85e5a30fdc15fa52395",
+  "git_dirty": true,
+  "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:11:29) [Clang 20.1.8 ]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "packages": {
+    "llama-cpp-python": "0.3.36",
+    "huggingface-hub": "2.2.0",
+    "pandas": "3.0.6",
+    "pyarrow": "25.0.1",
+    "mlflow": "3.17.1"
+  },
+  "code_sha256": {
+    "talkie_poc.py": "1b22c8f6389eaf4bd78ff7157fbb9dee8527b13213efe42e092dd9c1e8a174f9",
+    "run_experiment.py": "a6f17b3e3bfabfbb2f9a06560de53bb312668c79ac242c8eb3a75d75caa775b3"
+  },
+  "model": {
+    "repo": "niklassheth/talkie-1930-13b-base-GGUF",
+    "revision": "b4605dc53edb5542803053e87a6d3c0ac3d43cf7",
+    "file": "talkie-base-Q4_K_M.gguf",
+    "sha256": "9de40b2cf1c3513ade97a7ecc12a1dd2b471cb5b635d7482a5870d8fbd799bcd",
+    "quantization": "Q4_K_M"
+  },
+  "dataset": {
+    "repo": "cais/wmdp",
+    "revision": "7125571f22f032c56415e7980f48d877dd830ff8",
+    "file": "wmdp-bio/test-00000-of-00001.parquet",
+    "sha256": "738cee28e11e4dcf9a0efc6b2c22b425bddda4b2b69477a11f38539c86cf00b7"
+  },
+  "config": {
+    "name": "talkie_wmdp_bio_format_pilot",
+    "description": "Prompt-format compliance smoke test; accuracy is diagnostic only.",
+    "schema_version": 1,
+    "item_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "prompt_styles": [
+      "direct",
+      "exam",
+      "cloze",
+      "few_shot"
+    ],
+    "constrained_exam": true,
+    "generation": {
+      "max_tokens": 12,
+      "temperature": 0.0
+    },
+    "model": {
+      "n_ctx": 1024,
+      "n_batch": 256,
+      "n_gpu_layers": -1,
+      "seed": 42
+    }
+  }
+}

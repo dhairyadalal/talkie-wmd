@@ -1,0 +1,30 @@
+[project]
+name = "talk-wmd"
+version = "0.1.0"
+description = "Local, reproducible Talkie prompt-format experiments on WMDP-Bio"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+  "huggingface-hub>=2.2,<3",
+  "ipykernel>=7,<8",
+  "llama-cpp-python>=0.3.36,<0.4",
+  "mlflow>=3,<4",
+  "pandas>=3,<4",
+  "pyarrow>=23,<26",
+]
+
+[project.scripts]
+talk-wmd-download = "talk_wmd.assets:main"
+talk-wmd-run = "talk_wmd.experiment:main"
+
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/talk_wmd"]
+
+[dependency-groups]
+dev = ["pytest>=8,<10"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

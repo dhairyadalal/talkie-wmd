@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import hashlib
 
-from talkie_poc import download_dataset, download_model
+from talk_wmd.pilot import download_dataset, download_model
 
 
 MODEL_SHA256 = "9de40b2cf1c3513ade97a7ecc12a1dd2b471cb5b635d7482a5870d8fbd799bcd"

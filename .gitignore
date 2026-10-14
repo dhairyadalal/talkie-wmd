@@ -2,12 +2,13 @@
 .uv-cache/
 __pycache__/
 .ipynb_checkpoints/
+.pytest_cache/
 .DS_Store
 
-# Downloaded assets and generated output
+# Large downloaded assets and local MLflow index
 models/
 data/
-results/
+.tracking/
 
 # Catch weights or dataset shards placed outside the standard directories
 *.gguf

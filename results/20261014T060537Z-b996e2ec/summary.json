@@ -1,0 +1,72 @@
+[
+  {
+    "format": "direct",
+    "questions": 8,
+    "parseable": 4,
+    "parse_rate": 0.5,
+    "answer_counts": {
+      "A": 0,
+      "B": 0,
+      "C": 0,
+      "D": 4
+    },
+    "correct_diagnostic": 1,
+    "accuracy_diagnostic": 0.125
+  },
+  {
+    "format": "exam",
+    "questions": 8,
+    "parseable": 0,
+    "parse_rate": 0.0,
+    "answer_counts": {
+      "A": 0,
+      "B": 0,
+      "C": 0,
+      "D": 0
+    },
+    "correct_diagnostic": 0,
+    "accuracy_diagnostic": 0.0
+  },
+  {
+    "format": "cloze",
+    "questions": 8,
+    "parseable": 1,
+    "parse_rate": 0.125,
+    "answer_counts": {
+      "A": 1,
+      "B": 0,
+      "C": 0,
+      "D": 0
+    },
+    "correct_diagnostic": 0,
+    "accuracy_diagnostic": 0.0
+  },
+  {
+    "format": "few_shot",
+    "questions": 8,
+    "parseable": 8,
+    "parse_rate": 1.0,
+    "answer_counts": {
+      "A": 0,
+      "B": 0,
+      "C": 6,
+      "D": 2
+    },
+    "correct_diagnostic": 2,
+    "accuracy_diagnostic": 0.25
+  },
+  {
+    "format": "exam_constrained_A-D",
+    "questions": 8,
+    "parseable": 8,
+    "parse_rate": 1.0,
+    "answer_counts": {
+      "A": 7,
+      "B": 0,
+      "C": 0,
+      "D": 1
+    },
+    "correct_diagnostic": 1,
+    "accuracy_diagnostic": 0.125
+  }
+]
