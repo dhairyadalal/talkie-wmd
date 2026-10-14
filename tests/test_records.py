@@ -4,6 +4,7 @@ import pytest
 
 from talk_wmd.experiment import build_manifest, validate_config, write_run
 from talk_wmd.pilot import aggregate_records, evaluate_records
+from talk_wmd.performance import summarize_performance
 
 
 class FakeModel:
@@ -63,3 +64,14 @@ def test_manifest_hashes_package_sources(tmp_path) -> None:
     assert "src/talk_wmd/experiment.py" in manifest["code_sha256"]
     assert "src/talk_wmd/assets.py" in manifest["code_sha256"]
     assert manifest["dataset"]["sha256"]
+
+
+def test_completion_throughput_uses_total_call_time() -> None:
+    records = [
+        {"format": "direct", "usage": {"prompt_tokens": 10, "completion_tokens": 4}, "elapsed_seconds": 1.0},
+        {"format": "direct", "usage": {"prompt_tokens": 20, "completion_tokens": 8}, "elapsed_seconds": 3.0},
+    ]
+    performance = summarize_performance(records)
+    assert performance["overall"]["completion_tokens_per_second"] == 3.0
+    assert performance["overall"]["prompt_tokens"] == 30
+    assert performance["overall"]["calls"] == 2

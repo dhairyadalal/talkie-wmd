@@ -15,6 +15,7 @@ dependencies = [
 [project.scripts]
 talk-wmd-download = "talk_wmd.assets:main"
 talk-wmd-run = "talk_wmd.experiment:main"
+talk-wmd-performance = "talk_wmd.performance:main"
 
 [build-system]
 requires = ["hatchling>=1.27,<2"]

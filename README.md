@@ -143,9 +143,17 @@ For WMDP-Bio rows 0 through 7, the [recorded run](results/20261014T061723Z-ec8a0
 | Two-example few-shot | 8/8 | 6 C, 2 D | 2/8 |
 | Constrained exam | 8/8 | 7 A, 1 D | 1/8 |
 
+The Metal-enabled run generated 392 completion tokens in 55.94 seconds of recorded model-call time, averaging **7.01 completion tokens/s** across 40 calls. This includes prompt processing and excludes model loading; it is not decode-only speed. Recompute the overall and per-format rates from the traces with:
+
+```bash
+./.venv/bin/talk-wmd-performance results/20261014T061723Z-ec8a0715
+```
+
 The few-shot format produced a parseable answer for every sampled question, but its answers were concentrated on C. Eight items are sufficient for a format smoke test, not for a capability estimate. Option-order variation and a larger held-out sample would be needed for that purpose.
 
 ## Development
+
+See [Reproducible research practices in the Talkie pilot](docs/research_practices.md) for a short walkthrough of the experiment record and its limitations.
 
 ```bash
 ./.venv/bin/python -m pytest
